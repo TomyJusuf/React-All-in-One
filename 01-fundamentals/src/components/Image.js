@@ -1,7 +1,7 @@
-const Image = (img) => {
+const Image = ({ image, alt }) => {
   return (
     <>
-      <img src={img.img} width={300} alt={img.title} object-fit="cover" />
+      <img src={image} width={300} alt={alt} object-fit="cover" />
     </>
   )
 }
