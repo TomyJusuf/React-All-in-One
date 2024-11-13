@@ -9,16 +9,16 @@ import { book1, book2, book3 } from './data/myData.js'
 function BookList() {
   // Create an array of book objects using imported data
   const books = [book1, book2, book3]
-  const someValue = 'shakeAndBake'
-  const displayValue = () => {
-    console.log(someValue)
-  }
+
   return (
-    <section className="booklist">
-      {books.map((book, index) => {
-        return <Book {...book} key={index} displayValue={displayValue} />
-      })}
-    </section>
+    <>
+      <h1>amazon best sellers</h1>
+      <section className="booklist">
+        {books.map((book, index) => {
+          return <Book {...book} key={book.id} bookIndex={index} />
+        })}
+      </section>
+    </>
   )
 }
 
