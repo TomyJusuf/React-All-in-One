@@ -8,17 +8,16 @@ import Author from './Author'
  * @returns {ReactElement} A ReactElement representing a single book
  */
 const Book = (books) => {
-  const { img, title, author, displayValue } = books
+  const { img, title, author, id, bookIndex } = books
 
   return (
-    <article className="book">
-      {/* /* Renders the book's image */}
+    <article className="book" id={id}>
       <Image image={img} alt={title} />
-      {/* Renders the book's title */}
-      <Title titles={title} displayValues={displayValue} />
 
-      {/* Renders the book's author */}
+      <Title titles={title} />
+
       <Author author={author} />
+      <span className="number">{`# ${bookIndex + 1}`}</span>
     </article>
   )
 }
