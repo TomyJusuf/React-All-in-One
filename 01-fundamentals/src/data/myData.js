@@ -6,18 +6,21 @@ const book1 = {
   title: 'Interesting Facts For Curious Minds',
   author: 'Jordan Moore',
   img: Book_1,
+  id: 1,
 }
 
 const book2 = {
   title: 'Atomic Habits sss',
   author: 'James Clear',
   img: Book_2,
+  id: 2,
 }
 
 const book3 = {
   title: 'Fairy Tale',
   author: 'Stephen King',
   img: Book_3,
+  id: 3,
 }
 
 export { book1, book2, book3 }
