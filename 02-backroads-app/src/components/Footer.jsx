@@ -1,37 +1,20 @@
 import { pageLists, socialMediaLinks } from '../data'
+import Link from './Link'
+import SocialMedia from './SocialMedia'
 function Footer() {
   return (
     <footer className="section footer">
       {/* Links */}
       <ul className="footer-links">
         {pageLists.map((link) => {
-          const { id, href, title } = link
-          return (
-            <li key={id}>
-              <a href={href} className="footer-link">
-                {title}
-              </a>
-            </li>
-          )
+          return <Link key={link.id} {...link} />
         })}
       </ul>
 
       {/* Social media links */}
       <ul className="footer-icons">
         {socialMediaLinks.map((link) => {
-          const { id, href, icon } = link
-          return (
-            <li key={id}>
-              <a
-                href={href}
-                target="_blank"
-                rel="noreferrer"
-                className="footer-icon"
-              >
-                <i className={icon}></i>
-              </a>
-            </li>
-          )
+          return <SocialMedia key={link.id} {...link} />
         })}
       </ul>
       <p className="copyright">
