@@ -25,7 +25,7 @@ function About() {
             quisquam harum nam cumque temporibus explicabo dolorum sapiente odio
             unde dolor?
           </p>
-          <a href="#" className="btn">
+          <a href="#about" rel="noreferrer" className="btn">
             read more
           </a>
         </article>

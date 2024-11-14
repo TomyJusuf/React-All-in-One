@@ -1,5 +1,5 @@
 import logo from '../images/logo.svg'
-
+import { pageLists, socialMediaLinks } from '../data'
 function Navbar() {
   return (
     <nav className="navbar">
@@ -10,68 +10,37 @@ function Navbar() {
             <i className="fas fa-bars"></i>
           </button>
         </div>
-        {/* <!-- left this comment on purpose --> */}
+        {/* Links */}
         <ul className="nav-links" id="nav-links">
-          <li>
-            <a href="#home" className="nav-link">
-              {' '}
-              home{' '}
-            </a>
-          </li>
-
-          <li>
-            <a href="#about" className="nav-link">
-              {' '}
-              about{' '}
-            </a>
-          </li>
-
-          <li>
-            <a href="#services" className="nav-link">
-              {' '}
-              services{' '}
-            </a>
-          </li>
-
-          <li>
-            <a href="#tours" className="nav-link">
-              {' '}
-              tours
-            </a>
-          </li>
+          {pageLists.map((link) => {
+            const { id, href, title } = link
+            return (
+              <li key={id}>
+                <a href={href} className="nav-link">
+                  {title}
+                </a>
+              </li>
+            )
+          })}
         </ul>
 
+        {/*  Social media links */}
         <ul className="nav-icons">
-          <li>
-            <a
-              href="https://www.twitter.com"
-              target="_blank"
-              rel="noreferrer"
-              className="nav-icon"
-            >
-              <i className="fab fa-facebook"></i>
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://www.twitter.com"
-              target="_blank"
-              rel="noreferrer"
-              className="nav-icon"
-            >
-              <i className="fab fa-twitter"></i>
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://www.twitter.com"
-              target="_blank"
-              rel="noreferrer"
-              className="nav-icon"
-            >
-              <i className="fab fa-squarespace"></i>
-            </a>
-          </li>
+          {socialMediaLinks.map((link) => {
+            const { id, href, icon } = link
+            return (
+              <li key={id}>
+                <a
+                  href={href}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="nav-icon"
+                >
+                  <i className={icon}></i>
+                </a>
+              </li>
+            )
+          })}
         </ul>
       </div>
     </nav>
