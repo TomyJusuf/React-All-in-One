@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const authFetch = axios.create({
-  baseURL: 'https://www.course-api.com',
+  baseURL: 'http://localhost:5000',
   headers: {
     Accept: 'application/json',
   },
